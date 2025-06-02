@@ -9,8 +9,7 @@ mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
 
 try {
     $link = mysqli_connect(DB_SERVER, DB_USERNAME, DB_PASSWORD, DB_NAME);
-    mysqli_set_charset($link, 'utf8mb4');
-    echo "Connected successfully"; // Remove in production
+    mysqli_set_charset($link, 'utf8mb4');// Remove in production
 } catch (mysqli_sql_exception $e) {
     die("ERROR: Could not connect. " . $e->getMessage());
 }
